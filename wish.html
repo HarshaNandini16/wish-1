@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Happy New Year</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: radial-gradient(1000px 600px at 50% 20%, #ffd36a 0%, #ff7f50 35%, #a64dff 70%, #1b1b2f 100%);
+      --card-bg: rgba(255, 255, 255, 0.12);
+      --text: #ffffff;
+      --accent: #ffeaa7;
+    }
+
+    * { box-sizing: border-box; }
+    html, body {
+      height: 100%;
+      margin: 0;
+      font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, "Helvetica Neue", Arial, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+    }
+
+    .page {
+      min-height: 100%;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    .card {
+      width: min(900px, 92vw);
+      background: var(--card-bg);
+      backdrop-filter: blur(8px) saturate(120%);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 24px;
+      padding: 32px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+      text-align: center;
+    }
+
+    .headline {
+      font-weight: 800;
+      font-size: clamp(28px, 5vw, 54px);
+      letter-spacing: 0.5px;
+      margin: 0 0 14px;
+    }
+
+    .sub {
+      font-weight: 600;
+      font-size: clamp(16px, 2.5vw, 22px);
+      color: var(--accent);
+      margin: 0 0 24px;
+    }
+
+    .image-wrap {
+      display: inline-block;
+      border-radius: 18px;
+      overflow: hidden;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+      background: rgba(0,0,0,0.25);
+    }
+
+    .image-wrap img {
+      display: block;
+      width: min(720px, 88vw);
+      height: auto;
+      object-fit: cover;
+    }
+
+    .spark {
+      margin-top: 22px;
+      display: inline-flex;
+      gap: 10px;
+      align-items: center;
+      font-weight: 600;
+      color: #fef3c7;
+      opacity: 0.9;
+    }
+
+    .dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: #ffd36a;
+      box-shadow: 0 0 12px #ffd36a, 0 0 24px #ff9f1a;
+      animation: glow 1.4s ease-in-out infinite alternate;
+    }
+    .dot:nth-child(2) { animation-delay: 0.2s; }
+    .dot:nth-child(3) { animation-delay: 0.4s; }
+
+    @keyframes glow {
+      from { transform: translateY(0); opacity: 0.7; }
+      to   { transform: translateY(-3px); opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <section class="card">
+      <h1 class="headline">Happy New Year</h1>
+      <p class="sub">To friendship, laughter, and new beginnings</p>
+
+      <!-- Replace the src with your own "two friends" image URL or file path -->
+      <div class="image-wrap">
+        <img src="data:image/jpeg;base64,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" alt="Two friends celebrating the New Year together" />
+      </div>
+
+      <div class="spark" aria-hidden="true">
+        <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+        <span>Cheers to 2026!</span>
+      </div>
+    </section>
+  </main>
+</body>
+</html>
